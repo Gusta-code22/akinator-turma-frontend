@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akinator da Turma</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akinator da Turma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="container">
-        <button id="btn-tema" class="botao-tema" aria-label="Alternar tema">🌙</button>
+  <canvas id="matrix-bg" aria-hidden="true"></canvas>
+  <canvas id="nodes-bg" aria-hidden="true"></canvas>
 
-        <!-- Tela inicial -->
-        <section id="tela-inicial" class="tela">
-            <h1>🔮 Akinator da Turma</h1>
-            <p>Pense em alguém da turma. Eu vou tentar descobrir quem é!</p>
-            <button id="btn-iniciar">Começar</button>
-        </section>
+  <button id="btn-tema" class="btn-tema" aria-label="Alternar tema claro/escuro">🌙</button>
 
-        <!-- Tela do jogo (pergunta) -->
-        <section id="tela-jogo" class="tela escondida">
-            <p id="contador-candidatos" class="texto-secundario"></p>
-            <h2 id="texto-pergunta"></h2>
-            <div class="botoes-resposta">
-                <button id="btn-sim">Sim</button>
-                <button id="btn-nao">Não</button>
-            </div>
-        </section>
+  <main class="container">
 
-        <!-- Tela de resultado (descobriu) -->
-        <section id="tela-resultado" class="tela escondida">
-            <p class="texto-secundario">Eu acho que é...</p>
-            <img id="foto-pessoa" src="" alt="">
-            <h2 id="nome-pessoa"></h2>
-            <button id="btn-jogar-novamente">Jogar novamente</button>
-        </section>
+    <section id="tela-inicial" class="tela">
+      <p class="eyebrow">akinator // turma</p>
+      <h1>quem estou pensando?</h1>
+      <p class="subtitulo">responda algumas perguntas e eu tento adivinhar em quem você pensou — alguém da nossa turma.</p>
+      <button id="btn-iniciar" class="btn btn-primario">iniciar jogo</button>
+    </section>
 
-        <!-- Tela de "não descobri" -->
-        <section id="tela-nao-descobriu" class="tela escondida">
-            <h2>🤔 Você venceu!</h2>
-            <p>Não consegui descobrir quem é dessa vez.</p>
-            <button id="btn-jogar-novamente-2">Jogar novamente</button>
-        </section>
+    <section id="tela-jogo" class="tela escondida">
+      <div class="hud">
+        <span class="eyebrow">akinator // turma</span>
+        <span id="contador-candidatos" class="hud-contador"></span>
+      </div>
+      <p class="rotulo">pergunta</p>
+      <p id="texto-pergunta" class="pergunta"></p>
+      <div class="acoes">
+        <button id="btn-sim" class="btn btn-primario">sim</button>
+        <button id="btn-nao" class="btn btn-secundario">não</button>
+      </div>
+    </section>
 
-    </main>
+    <section id="tela-resultado" class="tela escondida">
+      <p class="rotulo">acho que é</p>
+      <div class="cartao-pessoa">
+        <img id="foto-pessoa" alt="">
+        <p id="nome-pessoa" class="nome"></p>
+      </div>
+      <button id="btn-jogar-novamente" class="btn btn-primario">jogar de novo</button>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="tela-nao-descobriu" class="tela escondida">
+      <p class="rotulo rotulo-sucesso">você venceu</p>
+      <h1>não consegui te descobrir</h1>
+      <p class="subtitulo">suas respostas não bateram com ninguém da turma dessa vez. quer tentar de novo?</p>
+      <button id="btn-jogar-novamente-2" class="btn btn-primario">jogar de novo</button>
+    </section>
+
+  </main>
+
+  <script src="matrix-bg.js"></script>
+  <script src="nodes-bg.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
