@@ -79,10 +79,15 @@ html[data-theme="dark"] #matrix-bg {
   opacity: 0.24;
 }
 
-.btn-tema {
+.controles-topo {
   position: absolute;
   top: 20px;
   right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-topo {
   width: 50px;
   height: 50px;
   border-radius: 10px;
@@ -169,7 +174,7 @@ h1 {
 }
 
 .btn:focus-visible,
-.btn-tema:focus-visible {
+.btn-topo:focus-visible {
   outline: 2px solid var(--purple);
   outline-offset: 2px;
 }

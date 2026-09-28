@@ -35,5 +35,5 @@
 
     redimensionar();
     window.addEventListener('resize', redimensionar);
-    setInterval(desenhar, 50);
+    setInterval(desenhar, 70);
 })();

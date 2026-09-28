@@ -14,7 +14,12 @@
   <canvas id="matrix-bg" aria-hidden="true"></canvas>
   <canvas id="nodes-bg" aria-hidden="true"></canvas>
 
-  <button id="btn-tema" class="btn-tema" aria-label="Alternar tema claro/escuro">🌙</button>
+  <audio id="audio-fundo" src="audio/musica-fundo.mp3" loop preload="none"></audio>
+
+  <div class="controles-topo">
+    <button id="btn-musica" class="btn-topo" aria-label="Ativar ou desativar música de fundo">🎵</button>
+    <button id="btn-tema" class="btn-topo" aria-label="Alternar tema claro/escuro">🌙</button>
+  </div>
 
   <main class="container">
 
@@ -58,6 +63,7 @@
 
   <script src="matrix-bg.js"></script>
   <script src="nodes-bg.js"></script>
+  <script src="musica.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
