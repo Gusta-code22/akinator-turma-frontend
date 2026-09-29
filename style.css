@@ -100,11 +100,11 @@ html[data-theme="dark"] #matrix-bg {
 
 .container {
   width: 100%;
-  max-width: 460px;
+  max-width: 520px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 44px 40px;
+  border-radius: 20px;
+  padding: 52px 46px;
   transition: opacity 0.25s ease;
 }
 
@@ -202,11 +202,15 @@ h1 {
   margin: 0 0 10px;
 }
 
+.rotulo-resultado {
+  font-size: 15px;
+}
+
 .pergunta {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 1.5;
-  margin: 0 0 28px;
+  margin: 0 0 32px;
 }
 
 .acoes {
@@ -226,11 +230,12 @@ h1 {
 }
 
 .cartao-pessoa img {
-  width: 96px;
-  height: 96px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--purple);
+  object-position: center 20%;
+  border: 3px solid var(--purple);
   background: var(--surface-2);
 }
 
@@ -242,8 +247,13 @@ h1 {
 
 @media (max-width: 480px) {
   .container {
-    padding: 32px 24px;
-    border-radius: 14px;
+    padding: 36px 26px;
+    border-radius: 16px;
+  }
+
+  .cartao-pessoa img {
+    width: 128px;
+    height: 128px;
   }
 }
 
