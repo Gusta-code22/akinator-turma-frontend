@@ -10,9 +10,20 @@
 
 ## 📺 Demonstração
 
-| Tema escuro | Tema claro |
-|---|---|
-| ![tela inicial — tema escuro](./docs/screenshot-dark.png) | ![tela inicial — tema claro](./docs/screenshot-light.png) |
+<table>
+  <tr>
+    <th>Tema escuro</th>
+    <th>Tema claro</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="./docs/screenshot-dark.png" width="650">
+    </td>
+    <td>
+      <img src="./docs/screenshot-light.png" width="650">
+    </td>
+  </tr>
+</table>
 
 ---
 
